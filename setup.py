@@ -225,6 +225,9 @@ setup(
         "omegaconf>=2.1.0rc1",
         "hydra-core>=1.1.0rc1",
         "black==21.4b2",
+        "diffdist",
+        "ftfy",
+        "timm"
         # When adding to the list, may need to update docs/requirements.txt
         # or add mock in docs/conf.py
     ],

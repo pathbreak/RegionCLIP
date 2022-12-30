@@ -128,7 +128,7 @@ def setup(args):
     cfg.set_new_allowed(True)
     cfg.merge_from_file(args.config_file)
     cfg.set_new_allowed(True)
-    #cfg.merge_from_list(args.opts)
+    cfg.merge_from_list(args.opts)
     cfg.freeze()
     default_setup(cfg, args)
     return cfg
