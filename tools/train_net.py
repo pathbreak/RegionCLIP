@@ -122,6 +122,10 @@ def setup(args):
     Create configs and perform basic setups.
     """
     cfg = get_cfg()
+    
+    # cfg.merge_from_file() throws this error: KeyError: 'Non-existent config key: MODEL.CLIP'
+    # Workaround provided in https://github.com/facebookresearch/detectron2/issues/2082.
+    cfg.set_new_allowed(True)
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
     cfg.freeze()
