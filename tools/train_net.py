@@ -127,6 +127,7 @@ def setup(args):
     # Workaround provided in https://github.com/facebookresearch/detectron2/issues/2082.
     cfg.set_new_allowed(True)
     cfg.merge_from_file(args.config_file)
+    cfg.set_new_allowed(True)
     cfg.merge_from_list(args.opts)
     cfg.freeze()
     default_setup(cfg, args)
